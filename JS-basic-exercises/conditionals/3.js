@@ -1,0 +1,1 @@
+Math.round(Math.random()) === 1 ? console.log('yes') : console.log('no');
