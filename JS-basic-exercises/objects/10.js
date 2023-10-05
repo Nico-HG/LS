@@ -1,8 +1,7 @@
 function clone(obj) {
-  let clone = {}
+  let clone = {};
   Object.assign(clone, obj);
-  return clone
-
+  return clone;
 }
 
 let person = {
