@@ -1,5 +1,4 @@
-
-rlSync = require('readline-sync');
+const rlSync = require('readline-sync');
 
 //ask the user for the first number
 //ask the user for the second number
@@ -9,26 +8,33 @@ rlSync = require('readline-sync');
 
 console.log('Welcome to Calculator');
 
-console.log('What\'s the first number?');
-let number1 = Number(rlSync.question());
+let number1;
+let number2;
+let operator;
 
-console.log('What\s the second number?');
-let number2 = Number(rlSync.question());
+do {
+  number1 = Number(rlSync.question("What is your first number?\n"));
+} while ( Object.is(number1, NaN) ) 
 
-console.log('What operation would you like to perform?\n1) Add 2) Subtract 3) Multiply 4) Divide');
-let operation = rlSync.question();
+do {
+  number2 = Number(rlSync.question("What is your second number?\n"));
+} while ( Object.is(number2, NaN) ) 
 
-let output;
-if (operation === '1') {
-  output = number1 + number2;
-} else if (operation === '2') {
-  output = number1 - number2;
-} else if (operation === '3') {
-  output = number1 * number2;
-} else if (operation === '4') {
-  output = number1 / number2;
+do {
+  operator = rlSync.question('What operation would you like to perform?\n1) Add 2) Subtract 3) Multiply 4) Divide\n');
+} while (operator !== '1' && operator !== '2' && operator !== '3' && operator !== '4') 
+
+switch (operator) {
+  case '1':
+    console.log(`The result is: ${number1 + number2}`);
+    break;
+  case '2':
+    console.log(`The result is: ${number1 - number2}`);
+    break;
+  case '3':
+    console.log(`The result is: ${number1 * number2}`);
+    break;
+  case '4':
+    console.log(`The result is: ${number1 / number2}`);  
+    break;
 }
-
-
-console.log(`The result is: ${output}`);
-
