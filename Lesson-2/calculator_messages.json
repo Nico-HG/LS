@@ -1,0 +1,20 @@
+
+{
+  "English": {
+    "greeting": "Welcome to Calculator",
+    "firstNumberInput": "What is your first number?",
+    "secondNumberInput": "What is your second number?",
+    "operatorInput": "What operation would you like to perform?\n1) Add 2) Subtract 3) Multiply 4) Divide",
+    "resultLog": "The result is: ",
+    "askAgain": "Would you like to perform a calculation?\n1) yes\n2) no"
+   },
+   "German": {
+    "greeting": "Willkommen bei Calculator",
+    "firstNumberInput": "Was ist Ihre erste Zahl?",
+    "secondNumberInput": "Was ist Ihre zweite Zahl?",
+    "operatorInput": "Welche Operation möchten Sie durchführen?\n1) Addition 2) Subtraktion 3) Multiplikation 4) Aufteilung",
+    "resultLog": "Das Ergebnis ist: ",
+    "askAgain": "Möchten Sie eine Berechnung durchführen?\n1) ja\n2) nein"
+   }
+
+}
