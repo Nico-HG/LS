@@ -5,5 +5,5 @@ if (weather === 'sunny') {
 } else if (weather === 'rainy') {
   console.log('Grab your umbrella.');
 } else {
-  console.log('Let\s stay inside.')
+  console.log('Let\s stay inside.');
 }

@@ -3,28 +3,32 @@
 //ask the user for an operation to perform
 //peform the operation on the two numbers
 //print the result to the terminal
-const rlSync = require('readline-sync');
-const MESSAGES = require('./calculator_messages.json'), LANGUAGE = 'English';
+const rlSync = require('readline-sync')
+const MESSAGES = require('./calculator_messages.json');
+const LANGUAGE = 'English';
 let calculatorContinue;
 
 function logText(key, clear, extraData = '') {
   if (clear) console.clear();
   console.log(MESSAGES[LANGUAGE][key] + extraData);
 }
-function getNumber(promptMessageKey) {
+
+function getNumber(messageKey) {
   let num;
   do {
-    num = rlSync.question(logText(promptMessageKey, true));
+    num = rlSync.question(logText(messageKey, true));
   } while (Object.is(Number(num), NaN) || !(num.trim()));
   return Number(num);
 }
-function getOperation(promptMessageKey) {
+
+function getOperation(messageKey) {
   let inputForOperation;
   do {
-    inputForOperation = rlSync.question(logText(promptMessageKey, true));
-  } while (inputForOperation !== '1' && inputForOperation !== '2' && inputForOperation !== '3' && inputForOperation !== '4'); 
+    inputForOperation = rlSync.question(logText(messageKey, true));
+  } while (!['1','2','3','4'].includes(inputForOperation)); 
   return inputForOperation;
 }
+
 function calculateAndReturnResult(number1, number2, operation) {
   if (operation === '4' && number2 === 0) return 'Invalid';
   switch (operation) {
@@ -34,17 +38,19 @@ function calculateAndReturnResult(number1, number2, operation) {
     case '4': return (number1 / number2);  
   }
 }
+
 function calculatorStart() {
-  let number1, number2, operation, result;
-  number1 = getNumber("firstNumberInput");
-  number2 = getNumber("secondNumberInput");
-  operation = getOperation('operationInput');
-  result = calculateAndReturnResult(number1, number2, operation);
+  let number1 = getNumber("firstNumberInput");
+  let number2 = getNumber("secondNumberInput");
+  let operation = getOperation('operationInput');
+  let result = calculateAndReturnResult(number1, number2, operation);
+
   do {
     logText('resultLog', true, result);
     calculatorContinue = rlSync.question(logText('askAgain'));
   } while (calculatorContinue !== '1' && calculatorContinue !== '2');
 }
+
 do { 
 calculatorStart(); 
 } while(calculatorContinue === '1');

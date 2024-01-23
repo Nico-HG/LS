@@ -7,7 +7,7 @@ let vocabulary = [
 // method 1 (wrong for the spec kinda)
 vocabulary.flat().forEach(element => console.log(element));
 
-//method (iterates through th sub arrays)
+//method (iterates through the sub arrays)
 for (let i = 0; i < 3; i += 1) {
   vocabulary[i].forEach(element => console.log(element));
 } 

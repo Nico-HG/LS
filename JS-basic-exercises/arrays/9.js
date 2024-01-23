@@ -5,7 +5,7 @@ let destinations = ['Prague', 'London', 'Sydney', 'Belfast', 'Rome',
   let contains = (string, array) => {
     for (let x of array) {
       if (x === string) {
-        return true 
+        return true ;
       }  
     }
     return false;

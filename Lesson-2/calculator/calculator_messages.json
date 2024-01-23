@@ -6,7 +6,7 @@
     "secondNumberInput": "What is your second number? (Only numbers will be accepted)",
     "operationInput": "What operation would you like to perform? (Only '1,2,3,4' inputs are accepted)\n1) Add 2) Subtract 3) Multiply 4) Divide",
     "resultLog": "The result is: ",
-    "askAgain": "Would you like to perform a calculation? (Only '1,2' inputs are accepted)\n1) yes\n2) no"
+    "askAgain": "Would you like to perform a calculation? (Only '1, 2' inputs are accepted)\n1) yes\n2) no"
    },
    "German": {
     "greeting": "Willkommen bei Calculator",

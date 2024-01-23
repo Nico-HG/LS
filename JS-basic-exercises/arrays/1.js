@@ -1,5 +1,3 @@
-let first = array => {
-  return array[0];
-}
+let first = array => array[0];
 
 console.log(first(['Earth', 'Moon', 'Mars']));
