@@ -3,7 +3,7 @@ const rlSync = require('readline-sync');
 let loanAmount;
 let annualPercentageRate;
 let loanDurationYears;
-let loanDurationMonths
+let loanDurationMonths;
 
 let checkEmpty = (userinfo) => userinfo ? userinfo : ' - ';
 
@@ -24,7 +24,6 @@ function numberValidation(number, isInteger) {
 let invalidInputMessage = (input, integer) => {
   if ((input) && numberValidation(input, integer)) console.log('\nINVALID INPUT');
 }
-
 
 do {
   logUserInfo();
